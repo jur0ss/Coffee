@@ -5,10 +5,13 @@ import android.provider.MediaStore.Audio.Radio
 import android.widget.ImageView
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import android.widget.SeekBar
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,8 +48,14 @@ class MainActivity : AppCompatActivity() {
             {
                 myImageView.setImageResource(images[2])
             }
-
         }
+
+        val myTextView: TextView = findViewById<TextView>(R.id.textview)
+
+        val seekBar = findViewById<SeekBar>(R.id.coffee_amount)
+
+        seekBar.setOnSeekBarChangeListener(object:SeekBar.OnSeekBarChangeListener)
+
 
 
 

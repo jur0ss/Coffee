@@ -17,10 +17,20 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Zamówienie"
+            android:text="Zamówienie:"
             android:layout_gravity="center_horizontal"
             android:layout_margin="10dp"
             android:textSize="23sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:textSize="20sp"
             android:textColor="@color/white"
             />
         <ImageView
@@ -133,7 +143,7 @@
                 android:id="@+id/coffee_amount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:max="100"
+                android:max="10"
                 android:progress="0"
                 android:progressBackgroundTint="#652f23"
                 android:progressTint="@color/white"
