@@ -54,7 +54,20 @@ class MainActivity : AppCompatActivity() {
 
         val seekBar = findViewById<SeekBar>(R.id.coffee_amount)
 
-        seekBar.setOnSeekBarChangeListener(object:SeekBar.OnSeekBarChangeListener)
+        seekBar.setOnSeekBarChangeListener(object:SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                myTextView.text = "Ilość kaw: $progress"
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+            }
+
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+            }
+
+
+
+        })
 
 
 
