@@ -49,7 +49,7 @@
             android:layout_margin="10dp"
             android:paddingStart="1dp"
             android:paddingEnd="15dp"
-            app:cardBackgroundColor="#652f23"
+            app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="25dp"
             app:cardElevation="1dp"
             android:layout_gravity="center"
@@ -91,7 +91,7 @@
             android:layout_margin="10dp"
             android:paddingStart="1dp"
             android:paddingEnd="15dp"
-            app:cardBackgroundColor="#652f23"
+            app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="25dp"
             app:cardElevation="1dp"
             android:layout_gravity="center"
@@ -126,7 +126,7 @@
             android:layout_margin="10dp"
             android:paddingStart="1dp"
             android:paddingEnd="15dp"
-            app:cardBackgroundColor="#652f23"
+            app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="25dp"
             app:cardElevation="1dp"
             android:layout_gravity="center"
@@ -144,10 +144,10 @@
                 android:layout_height="wrap_content"
                 android:max="10"
                 android:progress="0"
-                android:progressBackgroundTint="#652f23"
-                android:progressTint="@color/white"
+                android:progressBackgroundTint="@color/black"
+                android:progressTint="@color/black"
                 android:minWidth="100dp"
-                android:thumbTint="@color/white"
+                android:thumbTint="@color/black"
                 />
 
         </LinearLayout>
@@ -162,8 +162,8 @@
             android:textSize="18sp"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:textColor="@color/white"
-            android:backgroundTint="#4A170C"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
             >
 
         </Button>
