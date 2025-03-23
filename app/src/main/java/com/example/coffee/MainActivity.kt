@@ -2,11 +2,14 @@ package com.example.coffee
 
 import android.os.Bundle
 import android.provider.MediaStore.Audio.Radio
+import android.widget.Button
+import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.SeekBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -66,7 +69,29 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+        val orderButton = findViewById<Button>(R.id.order_button)
 
+
+        orderButton.setOnClickListener {
+            val selectedCoffee = when(myRadioGroup.checkedRadioButtonId)
+            {
+                R.id.cappuccino_radio -> "Cappuccino"
+                R.id.latte_radio -> "Latte"
+                R.id.espresso_radio -> "Espresso"
+                else -> "Nie wybrano kawy"
+            }
+
+            val milkChecked = findViewById<CheckBox>(R.id.milk).isChecked
+            val sugarChecked = findViewById<CheckBox>(R.id.sugar).isChecked
+
+            val coffeeAmount = seekBar.progress
+
+            val orderSummary = "Zamówienie: $selectedCoffee + " + when(milkChecked){true->"mleko, " else->""} +
+                    when(sugarChecked){true->"cukier" else -> ""} +
+                    "\n Ilość: $coffeeAmount "
+
+            Toast.makeText(this,orderSummary, Toast.LENGTH_SHORT).show()
+        }
 
 
 
